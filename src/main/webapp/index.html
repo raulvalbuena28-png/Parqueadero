@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parqueadero - Inicio</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header class="barra">
+        <h1>Parqueadero</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="parqueadero?accion=listar">Ver registros</a>
+        </nav>
+    </header>
+    <main>
+        <div class="bahias">
+
+            <!-- Formulario 1: ingreso (método POST) -->
+            <section class="bahia">
+                <h2>Registrar ingreso</h2>
+                <form action="parqueadero" method="post">
+                    <input type="hidden" name="accion" value="ingreso">
+                    <label for="placaIngreso">Placa</label>
+                    <input type="text" id="placaIngreso" name="placa" maxlength="7" required placeholder="ABC123">
+                    <label for="tipo">Tipo de vehículo</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Seleccione…</option>
+                        <option value="CARRO">Carro</option>
+                        <option value="MOTO">Moto</option>
+                    </select>
+                    <button type="submit">Registrar ingreso</button>
+                </form>
+            </section>
+
+            <!-- Formulario 2: salida (método POST) -->
+            <section class="bahia">
+                <h2>Registrar salida y cobrar</h2>
+                <form action="parqueadero" method="post">
+                    <input type="hidden" name="accion" value="salida">
+                    <label for="placaSalida">Placa</label>
+                    <input type="text" id="placaSalida" name="placa" maxlength="7" required placeholder="ABC123">
+                    <button type="submit">Calcular y registrar salida</button>
+                </form>
+            </section>
+
+            <!-- Formulario 3: consulta (método GET) -->
+            <section class="bahia">
+                <h2>Buscar por placa</h2>
+                <form action="parqueadero" method="get">
+                    <input type="hidden" name="accion" value="listar">
+                    <label for="placaBuscar">Placa (o parte de ella)</label>
+                    <input type="text" id="placaBuscar" name="placa" maxlength="7" placeholder="ABC">
+                    <button type="submit">Buscar</button>
+                </form>
+            </section>
+
+        </div>
+        <p>Tarifas: carro $3.000 por hora, moto $1.500 por hora. Se cobra hora o fracción, con un mínimo de una hora.</p>
+    </main>
+</body>
+</html>
