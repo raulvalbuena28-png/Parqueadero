@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f4f6f4; color: #222; }
+header { background: #39a900; color: #fff; padding: 14px 24px; }
+header h1 { margin: 0 0 8px; font-size: 24px; }
+nav a { color: #fff; text-decoration: none; margin-right: 18px; font-weight: bold; }
+nav a:hover { text-decoration: underline; }
+main { max-width: 900px; margin: 24px auto; padding: 0 16px; }
+footer { text-align: center; color: #777; font-size: 13px; padding: 20px; }
+h2 { color: #2b7a00; }
+form { background: #fff; padding: 18px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.15); max-width: 520px; }
+label { display: block; margin: 12px 0 4px; font-weight: bold; }
+input[type=text], select { width: 100%; padding: 9px; border: 1px solid #aaa; border-radius: 4px; font-size: 15px; }
+button, .boton-secundario { display: inline-block; margin-top: 16px; padding: 10px 18px; border: 0; border-radius: 4px;
+    background: #39a900; color: #fff; font-size: 15px; cursor: pointer; text-decoration: none; }
+.boton-secundario { background: #777; margin-left: 8px; }
+table { width: 100%; border-collapse: collapse; background: #fff; margin-bottom: 20px; }
+th, td { border: 1px solid #ccc; padding: 8px 10px; text-align: left; }
+th { background: #39a900; color: #fff; }
+table.detalle { max-width: 520px; margin-bottom: 20px; }
+table.detalle th { width: 45%; }
+tr.total th, tr.total td { background: #e6f5dc; color: #1c5a00; font-weight: bold; font-size: 17px; }
+.ok { background: #e3f6dc; border: 1px solid #39a900; color: #1c5a00; padding: 10px 14px; border-radius: 4px; margin-bottom: 14px; }
+.error { background: #fde8e8; border: 1px solid #d33; color: #8a1111; padding: 10px 14px; border-radius: 4px; margin-bottom: 14px; }
+.error ul { margin: 0; padding-left: 20px; }
+.nota { color: #666; font-size: 13px; }
+.resumen { display: flex; gap: 14px; margin-bottom: 20px; }
+.tarjeta { flex: 1; padding: 16px; border-radius: 8px; color: #fff; text-align: center; font-weight: bold; }
+.tarjeta span { display: block; font-size: 32px; }
+.tarjeta.disponible { background: #39a900; }
+.tarjeta.ocupado { background: #c0392b; }
+.tarjeta.apartado { background: #e08e0b; }
+.etiqueta { padding: 3px 10px; border-radius: 12px; color: #fff; font-size: 13px; font-weight: bold; }
+.etiqueta.DISPONIBLE { background: #39a900; }
+.etiqueta.OCUPADO { background: #c0392b; }
+.etiqueta.APARTADO { background: #e08e0b; }
+@media print { header, footer, button, .boton-secundario { display: none; } }
